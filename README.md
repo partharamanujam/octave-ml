@@ -1,6 +1,6 @@
 # INCOMPLETE - THIS IS WORK IN PROGRESS
 
-  Octave based Machine-learning Routines
+  Octave based Machine-learning routines
 
 #### Setup
 
@@ -8,7 +8,7 @@
 # ensure octave is installed
 # get code
 $ git clone https://github.com/partharamanujam/octave-ml.git
-# include .../octave-ml/octaveml in the octave path 
+# include .../octave-ml/octavelib in the octave path 
 # now check examples folder
 ```
 
@@ -58,13 +58,9 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
   This section provides a list of various machine-learning and support routines available. For more detailed information, please look at the embedded documentation using 'help' for the specific routine.
 
-#### generateFeaturesPolynomial
+#### [generateFeaturesPolynomial](octavelib/generateFeaturesPolynomial.m)
 
-#### addBiasTerm
-
-#### computeThetaByNormalEquation
-
-#### computeHypothesisByNormalEquation
+#### [addBiasTerm](octavelib/addBiasTerm.m)
 
 ## License
 
