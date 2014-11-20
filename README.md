@@ -1,5 +1,3 @@
-# INCOMPLETE - THIS IS WORK IN PROGRESS
-
   Octave based Machine-learning routines
 
 #### Setup
@@ -14,7 +12,7 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
 ## Features
 
-  * Normal Equation - In progress
+  * Normal Equation
   * Gradient Descent - ToDo
   * Neural Networks - ToDo
   * Support Vector Machines - ToDo
