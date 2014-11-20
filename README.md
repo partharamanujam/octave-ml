@@ -14,7 +14,7 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
 ## Features
 
-  * Normal Equation - ToDo
+  * Normal Equation - In progress
   * Gradient Descent - ToDo
   * Neural Networks - ToDo
   * Support Vector Machines - ToDo
@@ -32,13 +32,13 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
   See examples folder for usage.
 
-#### Naming Conventions
+#### Terminology / Conventions
 
 ###### Input-features
 
   Features are inputs from the training-set to be used for machine-learning. This is usually represented by the matrix-variable "X".
 
-###### Output-results
+###### Outputs
 
   Outputs refer to the actual/known results corresponding to the input-features from the training-set. This is usually represented by the vector-variable "y".
 
@@ -48,11 +48,11 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
 ###### Theta-coefficients
 
-  Theta refers to the coefficients/parameters that map/fit the input-features to the output-results. This is usually represented by the vector-variable "theta".
+  Theta refers to the hypothesis of coefficients/parameters that map/fit the input-features to the output-results. This is usually represented by the vector-variable "theta".
 
-###### Hypothesis
+###### Estimated-value
 
-  Hypothesis refers to the predicted value for a given set of input-features using computed theta. This is usually represented by the variable "h".
+  Estimated-value refers to the predicted value for a given set of input-features using previously computed theta from the training-set. This is usually represented by the variable "p".
 
 ## Machine-Learning & Support Routines
 
@@ -61,6 +61,10 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 #### [generateFeaturesPolynomial](octavelib/generateFeaturesPolynomial.m)
 
 #### [addBiasTerm](octavelib/addBiasTerm.m)
+
+#### [computeThetaByNormalEquation](octavelib/computeThetaByNormalEquation.m)
+
+#### [predictByNormalEquation](octavelib/predictByNormalEquation.m)
 
 ## License
 

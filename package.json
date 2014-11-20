@@ -1,0 +1,17 @@
+{
+  "name": "octave-ml",
+  "description": "Octave based Machine-learning routines",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Partha R <parthasarathi.ramanujam@gmail.com>",
+  "keywords": [
+    "machine-learning",
+    "octave",
+    "matlab"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/partharamanujam/octave-ml"
+  },
+  "readmeFilename": "README.md"
+}
