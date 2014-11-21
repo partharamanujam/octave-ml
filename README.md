@@ -12,7 +12,7 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
 ## Features
 
-  * Normal Equation
+  * Normal Equation - Linear Regression
   * Gradient Descent - ToDo
   * Neural Networks - ToDo
   * Support Vector Machines - ToDo
@@ -47,6 +47,10 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 ###### Theta-coefficients
 
   Theta refers to the hypothesis of coefficients/parameters that map/fit the input-features to the output-results. This is usually represented by the vector-variable "theta".
+
+###### Lambda regularization-parameter
+
+  Lambda is the regularization parameter used to manage fitting of parameters. This is usually represented by the vector-variable "lambda".
 
 ###### Estimated-value
 
