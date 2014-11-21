@@ -13,9 +13,10 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 ## Features
 
   * Normal Equation - Linear Regression
-  * Gradient Descent - ToDo
-  * Neural Networks - ToDo
-  * Support Vector Machines - ToDo
+  * Gradient Descent - Linear Regression
+  * Gradient Descent - Logistic Regression : ToDo
+  * Neural Networks : ToDo
+  * Support Vector Machines : ToDo
 
 #### Installation Dependencies
 
@@ -52,6 +53,10 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
   Lambda is the regularization parameter used to manage fitting of parameters. This is usually represented by the vector-variable "lambda".
 
+###### Feature scaling/normalization
+
+  Feature scaling/normalization is the process of modifying the input-features to allow for better fitting. This is usually done using a combination of mean (represented by parameter mu), and standard-deviation (represented by parameter sigma). Note that the bias-term is usually not scaled/normalized.
+
 ###### Estimated-value
 
   Estimated-value refers to the predicted value for a given set of input-features using previously computed theta from the training-set. This is usually represented by the variable "p".
@@ -67,6 +72,20 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 #### [computeThetaByNormalEquation](octavelib/computeThetaByNormalEquation.m)
 
 #### [predictByNormalEquation](octavelib/predictByNormalEquation.m)
+
+#### [computeScalingParams](octavelib/computeScalingParams.m)
+
+#### [scaleFeatures](octavelib/scaleFeatures.m)
+
+#### [choosePolynomialForGradientDescent](octavelib/choosePolynomialForGradientDescent.m)
+
+#### [chooseRegularizationForGradientDescent](octavelib/chooseRegularizationForGradientDescent.m)
+
+#### [computeThetaByLinearGradDescFminunc](octavelib/computeThetaByLinearGradDescFminunc.m)
+
+#### [linearRegressionCostFunction](octavelib/linearRegressionCostFunction.m)
+
+#### [predictByLinearGradDesc](octavelib/predictByLinearGradDesc.m)
 
 ## License
 
