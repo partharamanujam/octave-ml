@@ -1,8 +1,15 @@
-% set-path for octavelib
+% set-path for octavelib and clear
 addpath([pwd() '/../octavelib']);
+clear ; close all; clc;
 
-% data: change in water-level (x) vs. water flowing out (y)
-% load X, y, Xval, yval, Xtest, ytest in environment
+% dataset containing historical records on the change in the water level, x,
+% and the amount of water owing out of the dam, y.
+% This dataset is divided into three parts:
+% 1. A training set that your model will learn on: X, y
+% 2. A cross validation set for determining the regularization parameter: Xval, yval
+% 3. A test set for evaluating performance: Xtest, ytest
+
+% load data
 load('damlevels.mat');
 %plot(X, y, 'bx', 'MarkerSize', 5, 'LineWidth', 1.5);
 %hold on;
@@ -15,14 +22,14 @@ load('damlevels.mat');
 %pause;
 
 % choose polynomial degree
-degree = choosePolynomialForGradientDescent(X, y, Xval, yval, 10);
+degree = choosePolynomialForLinearGradDesc(X, y, Xval, yval, 10);
 
 % calculate corresponding mu and sigma
 XPoly = generateFeaturesPolynomial(X, degree);
 [mu, sigma] = computeScalingParams(XPoly);
 
 % choose regulaization factor
-lambda = chooseRegularizationForGradientDescent(X, y, Xval, yval, degree);
+lambda = chooseRegularizationForLinearGradDesc(X, y, Xval, yval, degree);
 
 % compute theta
 theta = computeThetaByLinearGradDescFminunc(X, y, degree, lambda);
@@ -37,7 +44,7 @@ XtestPoly = generateFeaturesPolynomial(Xtest, degree);
 XtestPolyNormBias = addBiasTerm(scaleFeatures(XtestPoly, mu, sigma));
 
 % plot prediction error (cost) versus test-set
-prediction = (theta' * XtestPolyNormBias')';
+prediction = XtestPolyNormBias*theta;
 plot(Xtest, ytest, 'gx', 'MarkerSize', 5, 'LineWidth', 1.5);
 hold on;
 plot(Xtest, prediction, 'bx', 'MarkerSize', 5, 'LineWidth', 1.5);

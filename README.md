@@ -77,9 +77,9 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
 #### [scaleFeatures](octavelib/scaleFeatures.m)
 
-#### [choosePolynomialForGradientDescent](octavelib/choosePolynomialForGradientDescent.m)
+#### [choosePolynomialForLinearGradDesc](octavelib/choosePolynomialForLinearGradDesc.m)
 
-#### [chooseRegularizationForGradientDescent](octavelib/chooseRegularizationForGradientDescent.m)
+#### [chooseRegularizationForLinearGradDesc](octavelib/chooseRegularizationForLinearGradDesc.m)
 
 #### [computeThetaByLinearGradDescFminunc](octavelib/computeThetaByLinearGradDescFminunc.m)
 
@@ -89,4 +89,5 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
 ## License
 
-  [MIT](LICENSE)
+  * This code: [MIT](LICENSE)
+  * Examples data: Courtesy ML-007 class

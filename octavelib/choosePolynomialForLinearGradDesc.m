@@ -1,14 +1,14 @@
-%choosePolynomialForGradientDescent returns the degree of the polynomial
+%choosePolynomialForLinearGradDesc returns the degree of the polynomial
 %which best fits the provided input-features (training-set) when checked
 %againt the provided validation-set
-%    degree = choosePolynomialForGradientDescent(Xtrain, ytrain, Xval, yval, n)
+%    degree = choosePolynomialForLinearGradDesc(Xtrain, ytrain, Xval, yval, n)
 %    computes the degree of the polynomial which best fits the provided
 %    training-set as Xtrain and ytrain by comparing the results against
 %    the provided validation-set as Xval and yval from the range of values
 %    from 1:n
 %    Note: This routine explicitly adds the bias-term before computation
 
-function degree = choosePolynomialForGradientDescent(Xtrain, ytrain, Xval, yval, n)
+function degree = choosePolynomialForLinearGradDesc(Xtrain, ytrain, Xval, yval, n)
 
 degree = 1;
 errorTrain = zeros(n,1);
@@ -35,6 +35,7 @@ end
 %legend('Train', 'Validation')
 %xlabel('Degree');
 %ylabel('Error');
+%fprintf('Program paused. Press enter to continue.\n');
 %pause;
 
 [error, degree] = min(errorVal); 

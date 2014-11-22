@@ -1,7 +1,12 @@
-% set-path for octavelib
+% set-path for octavelib and clear
 addpath([pwd() '/../octavelib']);
+clear ; close all; clc;
 
-% load houses pricing-data
+% The first column is the size of the house (in square feet), the
+% second column is the number of bedrooms, and the third column is
+% the price of the house.
+
+% load data
 data = csvread('prices.csv');
 %plot3(data(:, 1), data(:, 2), data(:, 3), 'rx', 'MarkerSize', 5);
 
