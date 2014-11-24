@@ -11,37 +11,43 @@ clear ; close all; clc;
 
 % load data
 load('damlevels.mat');
-%plot(X, y, 'bx', 'MarkerSize', 5, 'LineWidth', 1.5);
-%hold on;
-%plot(Xval, yval, 'gx', 'MarkerSize', 5, 'LineWidth', 1.5);
-%plot(Xtest, ytest, 'rx', 'MarkerSize', 5, 'LineWidth', 1.5);
-%legend('Training', 'Validation', 'Test');
-%xlabel('Change in water level (x)');
-%ylabel('Water flowing out of the dam (y)');
-%hold off;
-%pause;
+fprintf('Visualizing data...\n');
+plot(X, y, 'bx', 'MarkerSize', 5, 'LineWidth', 1.5);
+hold on;
+plot(Xval, yval, 'gx', 'MarkerSize', 5, 'LineWidth', 1.5);
+plot(Xtest, ytest, 'rx', 'MarkerSize', 5, 'LineWidth', 1.5);
+legend('Training', 'Validation', 'Test');
+xlabel('Change in water level (x)');
+ylabel('Water flowing out of the dam (y)');
+hold off;
+fprintf('Program paused. Press enter to continue.\n');
+pause;
 
 % choose polynomial degree
 degree = choosePolynomialForLinearGradDesc(X, y, Xval, yval, 10);
 
-% calculate corresponding mu and sigma
+% generate corresponding polynomials & scale-features
 XPoly = generateFeaturesPolynomial(X, degree);
 [mu, sigma] = computeScalingParams(XPoly);
+XPolyNormBias = addBiasTerm(scaleFeatures(XPoly, mu, sigma));
+XvalPoly = generateFeaturesPolynomial(Xval, degree);
+XvalPolyNormBias = addBiasTerm(scaleFeatures(XvalPoly, mu, sigma));
+XtestPoly = generateFeaturesPolynomial(Xtest, degree);
+XtestPolyNormBias = addBiasTerm(scaleFeatures(XtestPoly, mu, sigma));
 
 % choose regulaization factor
-lambda = chooseRegularizationForLinearGradDesc(X, y, Xval, yval, degree);
+lambda = chooseRegularizationForLinearGradDesc(XPolyNormBias, y, XvalPolyNormBias, yval)
 
 % compute theta
-theta = computeThetaByLinearGradDescFminunc(X, y, degree, lambda);
+theta = computeThetaByLinearGradDescFminunc(XPolyNormBias, y, lambda);
 
 % predict water flow at level 30
 x = [30];
-level = predictByLinearGradDesc(x, mu, sigma, degree, theta);
+xPoly = generateFeaturesPolynomial(x, degree);
+xPolyNormBias = addBiasTerm(scaleFeatures(xPoly, mu, sigma));
+level = predictByLinearGradDesc(xPolyNormBias, theta);
 fprintf("Predicted water-flow at level %.3f is %.3f\n", x(1), level);
 
-% generate polynomial features for test-set
-XtestPoly = generateFeaturesPolynomial(Xtest, degree);
-XtestPolyNormBias = addBiasTerm(scaleFeatures(XtestPoly, mu, sigma));
 
 % plot prediction error (cost) versus test-set
 prediction = XtestPolyNormBias*theta;

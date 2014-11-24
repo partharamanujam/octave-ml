@@ -1,15 +1,12 @@
 %predictByLinearGradDesc returns the predicted hypothesis for the
-%input-features using previously computed polynomial degree and theta
-%    p = predictByLinearGradDesc(x, mu, sigma, degree, theta) returns the
-%    predicted value for the provided input-features in x via previously computed
-%    mean in mu, standard-deviation in sigma, polynomial degree, and 
+%input-features using previously computed theta
+%    p = predictByLinearGradDesc(x, theta) returns the predicted value
+%    for the provided input-features in x using previously computed
 %    theta-coefficients in theta
-%    Note: This routine explicitly adds the bias-term before computation
+%    Note: This routine does "not" add the bias-term
 
-function p = predictByLinearGradDesc(x, mu, sigma, degree, theta)
+function p = predictByLinearGradDesc(x, theta)
 
-xPoly = generateFeaturesPolynomial(x, degree);
-xPolyNormBias = addBiasTerm(scaleFeatures(xPoly, mu, sigma));
-p = xPolyNormBias * theta;
+p = x * theta;
 
 end

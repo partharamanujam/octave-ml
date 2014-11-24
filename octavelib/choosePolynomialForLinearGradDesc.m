@@ -5,38 +5,38 @@
 %    computes the degree of the polynomial which best fits the provided
 %    training-set as Xtrain and ytrain by comparing the results against
 %    the provided validation-set as Xval and yval from the range of values
-%    from 1:n
+%    from 1:max
 %    Note: This routine explicitly adds the bias-term before computation
 
-function degree = choosePolynomialForLinearGradDesc(Xtrain, ytrain, Xval, yval, n)
+function degree = choosePolynomialForLinearGradDesc(Xtrain, ytrain, Xval, yval, max)
 
 degree = 1;
-errorTrain = zeros(n,1);
-errorVal = zeros(n,1);
+errorTrain = zeros(max,1);
+errorVal = zeros(max,1);
 
-for idx=1:n
+for idx=1:max
 
-    theta = computeThetaByLinearGradDescFminunc(Xtrain, ytrain, idx, 0);
-    % training-set
+    % generate polynomials & scale-features
     XtrainPoly = generateFeaturesPolynomial(Xtrain, idx);
     [mu, sigma] = computeScalingParams(XtrainPoly);
     XtrainPolyNormBias = addBiasTerm(scaleFeatures(XtrainPoly, mu, sigma));
-    % validation-set
     XvalPoly = generateFeaturesPolynomial(Xval, idx);
     XvalPolyNormBias = addBiasTerm(scaleFeatures(XvalPoly, mu, sigma));
     % calculate error
+    theta = computeThetaByLinearGradDescFminunc(XtrainPolyNormBias, ytrain, 0);
     errorTrain(idx) = linearRegressionCostFunction(XtrainPolyNormBias, ytrain, theta, 0);
     errorVal(idx) = linearRegressionCostFunction(XvalPolyNormBias, yval, theta, 0);
 
 end
 
-%plot(1:n, errorTrain, 1:n, errorVal);
-%title("Plot for Polynomial Degree");
-%legend('Train', 'Validation')
-%xlabel('Degree');
-%ylabel('Error');
-%fprintf('Program paused. Press enter to continue.\n');
-%pause;
+fprintf('Visualizing polynomial degree...\n');
+plot(1:max, errorTrain, 1:max, errorVal);
+title("Plot for Polynomial Degree");
+legend('Train', 'Validation')
+xlabel('Degree');
+ylabel('Error');
+fprintf('Program paused. Press enter to continue.\n');
+pause;
 
 [error, degree] = min(errorVal); 
 
