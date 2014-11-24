@@ -1,13 +1,12 @@
 %predictByNormalEquation returns the predicted hypothesis for the
 %input-features using previously computed theta
-%    p = predictByNormalEquation(x, n, theta) returns the predicted
+%    p = predictByNormalEquation(x, theta) returns the predicted
 %    value for the provided input-features in x via previously computed
-%    theta-coefficients in theta using a polynomial of degree n
-%    Note: This routine explicitly adds the bias-term before computation
+%    theta-coefficients in theta
+%    Note: This routine does "not" add the bias-term
 
-function p = predictByNormalEquation(x, n, theta)
+function p = predictByNormalEquation(x, theta)
 
-xPolyBias = addBiasTerm(generateFeaturesPolynomial(x, n));
-p = xPolyBias * theta;
+p = x * theta;
 
 end
