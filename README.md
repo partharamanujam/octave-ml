@@ -12,11 +12,22 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
 ## Features
 
+#### Supervised Learning
+
   * Normal Equation - Linear Regression
   * Gradient Descent - Linear Regression
-  * Gradient Descent - Logistic Regression : ToDo
+  * Gradient Descent - Logistic Regression
   * Neural Networks : ToDo
   * Support Vector Machines : ToDo
+
+#### Un-Supervised Learning
+
+  * K-means Clustering: ToDo
+
+#### Miscellaneous / Utilities
+
+  * Feature Scaling/Normalization
+  * Principal Component Analysis: ToDo
 
 #### Installation Dependencies
 
@@ -47,7 +58,7 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
 ###### Theta-coefficients
 
-  Theta refers to the hypothesis of coefficients/parameters that map/fit the input-features to the output-results. This is usually represented by the vector-variable "theta".
+  Theta refers to the hypothesis of coefficients/parameters that map/fit the input-features to the output-results. This is usually represented by the vector-variable "theta" (or Theta).
 
 ###### Lambda regularization-parameter
 
@@ -86,6 +97,20 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 #### [linearRegressionCostFunction](octavelib/linearRegressionCostFunction.m)
 
 #### [predictByLinearGradDesc](octavelib/predictByLinearGradDesc.m)
+
+#### [chooseRegularizationForLogisticGradDesc](octavelib/chooseRegularizationForLogisticGradDesc.m)
+
+#### [logisticRegressionOneVsAllTheta](octavelib/logisticRegressionOneVsAllTheta.m)
+
+#### [predictByLogisticGradDescOneVsAll](octavelib/predictByLogisticGradDescOneVsAll.m)
+
+#### [logisticRegressionOneVsAllError](octavelib/logisticRegressionOneVsAllError.m)
+
+#### [computeThetaByLogisticGradDescFminunc](octavelib/computeThetaByLogisticGradDescFminunc.m)
+
+#### [logisticRegressionCostFunction](octavelib/logisticRegressionCostFunction.m)
+
+#### [sigmoid](octavelib/sigmoid.m)
 
 ## License
 

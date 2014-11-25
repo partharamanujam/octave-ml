@@ -2,7 +2,7 @@
 %input-features to the outputs using regularization
 %    theta = computeThetaByLinearGradDescFminunc(Xtrain, ytrain, lambda) returns
 %    the theta-coefficients to fit the input-features in X to the outputs
-%    in y using the regularization-parameter lambda using Linear Regression
+%    in ytrain using the regularization-parameter lambda using Linear Regression
 %    via Gradient Descent implemented by fminunc
 %    Note: This routine does "not" add the bias-term
 

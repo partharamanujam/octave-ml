@@ -1,13 +1,19 @@
 {
   "name": "octave-ml",
   "description": "Octave based Machine-learning routines",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": "Partha R <parthasarathi.ramanujam@gmail.com>",
   "keywords": [
     "machine-learning",
     "octave",
-    "matlab"
+    "matlab",
+    "linear-regression",
+    "logistic-regression",
+    "gradient-descent",
+    "neural-networks",
+    "support-verctor-machines",
+    "k-means"
   ],
   "repository": {
     "type": "git",

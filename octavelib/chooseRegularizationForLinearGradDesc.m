@@ -4,7 +4,8 @@
 %    lambda = chooseRegularizationForLinearGradDesc(Xtrain, ytrain, Xval, yval)
 %    computes the regularization factor lambda which best fits the provided
 %    training-set as Xtrain and ytrain by comparing the results against
-%    the provided validation-set as Xval and yval
+%    the provided validation-set as Xval and yval using Liner Regression
+%    via Gradient Descent
 %    Note: This routine does "not" add the bias-term
 
 function lambda = chooseRegularizationForLinearGradDesc(Xtrain, ytrain, Xval, yval)

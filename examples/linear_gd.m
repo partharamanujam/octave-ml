@@ -36,7 +36,7 @@ XtestPoly = generateFeaturesPolynomial(Xtest, degree);
 XtestPolyNormBias = addBiasTerm(scaleFeatures(XtestPoly, mu, sigma));
 
 % choose regulaization factor
-lambda = chooseRegularizationForLinearGradDesc(XPolyNormBias, y, XvalPolyNormBias, yval)
+lambda = chooseRegularizationForLinearGradDesc(XPolyNormBias, y, XvalPolyNormBias, yval);
 
 % compute theta
 theta = computeThetaByLinearGradDescFminunc(XPolyNormBias, y, lambda);
