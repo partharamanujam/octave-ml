@@ -22,14 +22,14 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
 #### Un-Supervised Learning
 
-  * K-means Clustering: ToDo
+  * K Means - Clustering
 
 #### Miscellaneous / Utilities
 
   * Feature Scaling/Normalization
-  * Principal Component Analysis: ToDo
+  * Principal Component Analysis (Dimensionality Reduction): ToDo
 
-#### Installation Dependencies
+## Installation Dependencies
 
   * Octave 3.6.4 or above - https://www.gnu.org/software/octave/download.html
   * Octave-Forge "specfun" package - http://octave.sourceforge.net/specfun
@@ -111,6 +111,16 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 #### [logisticRegressionCostFunction](octavelib/logisticRegressionCostFunction.m)
 
 #### [sigmoid](octavelib/sigmoid.m)
+
+#### [generateKMeansClusters](octavelib/generateKMeansClusters.m)
+
+#### [kMeansCostFunction](octavelib/kMeansCostFunction.m)
+
+#### [kMeansInitCentroids](octavelib/kMeansInitCentroids.m)
+
+#### [kMeansClosestCentroids](octavelib/kMeansClosestCentroids.m)
+
+#### [kMeansComputeCentroids](octavelib/kMeansComputeCentroids.m)
 
 ## License
 
