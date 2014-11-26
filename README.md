@@ -27,7 +27,7 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 #### Miscellaneous / Utilities
 
   * Feature Scaling/Normalization
-  * Principal Component Analysis (Dimensionality Reduction): ToDo
+  * Principal Component Analysis (Dimensionality Reduction)
 
 ## Installation Dependencies
 
@@ -123,6 +123,12 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 #### [kMeansClosestCentroids](octavelib/kMeansClosestCentroids.m)
 
 #### [kMeansComputeCentroids](octavelib/kMeansComputeCentroids.m)
+
+#### [computePCA](octavelib/computePCA.m)
+
+#### [projectPCAData](octavelib/projectPCAData.m)
+
+#### [recoverPCAData](octavelib/recoverPCAData.m)
 
 ## License
 
