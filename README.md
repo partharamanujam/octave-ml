@@ -112,6 +112,8 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
 #### [sigmoid](octavelib/sigmoid.m)
 
+#### [generateKMeansClustersMinCost](octavelib/generateKMeansClustersMinCost.m)
+
 #### [generateKMeansClusters](octavelib/generateKMeansClusters.m)
 
 #### [kMeansCostFunction](octavelib/kMeansCostFunction.m)
