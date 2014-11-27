@@ -1,6 +1,5 @@
-% set-path for octavelib and clear
-addpath([pwd() '/../octavelib']);
-clear ; close all; clc;
+%init
+initEnv();
 
 % dataset containing historical records on the change in the water level, x,
 % and the amount of water owing out of the dam, y.

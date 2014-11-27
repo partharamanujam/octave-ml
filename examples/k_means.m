@@ -1,6 +1,5 @@
-% set-path for octavelib and clear
-addpath([pwd() '/../octavelib']);
-clear ; close all; clc;
+%init
+initEnv();
 
 %  Load an image of a 24-bit colors bird & generate the input-features
 A = double(imread('bird_small.png'));

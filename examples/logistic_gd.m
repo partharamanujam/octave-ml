@@ -1,6 +1,5 @@
-% set-path for octavelib & clear
-addpath([pwd() '/../octavelib']);
-clear ; close all; clc;
+%init
+initEnv();
 
 % data set that contains 5000 training examples of handwritten digits where 
 % each training example is a 20 x 20 pixel grayscale image of the digit.
@@ -14,11 +13,16 @@ clear ; close all; clc;
 load('numbers.mat');
 
 % display sample digit
-fprintf("Visualize data for sample-value: %d\n", y(3000));
+fprintf("Visualize sample-data...\n");
 colormap(gray);
-imagesc(reshape(X(3000,:),20,20));
+for idx=1:10
+    subplot(1, 10, idx);
+    imagesc(reshape(X((idx-1)*500+1, :), 20, 20));
+    axis("square", "off");
+end
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+close();
 
 % identify labels
 labels = unique(y);

@@ -1,6 +1,5 @@
-% set-path for octavelib and clear
-addpath([pwd() '/../octavelib']);
-clear ; close all; clc;
+%init
+initEnv();
 
 % The first column is the size of the house (in square feet), the
 % second column is the number of bedrooms, and the third column is

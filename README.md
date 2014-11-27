@@ -32,7 +32,10 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 ## Installation Dependencies
 
   * Octave 3.6.4 or above - https://www.gnu.org/software/octave/download.html
-  * Octave-Forge "specfun" package - http://octave.sourceforge.net/specfun
+  * Octave-Forge packages - http://octave.sourceforge.net
+    - specfun
+    - nan
+    - image
 
   Note: Ensure that the required packages are loaded at Octave startup
 

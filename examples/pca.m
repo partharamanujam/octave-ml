@@ -1,6 +1,5 @@
-% set-path for octavelib and clear
-addpath([pwd() '/../octavelib']);
-clear ; close all; clc;
+%init
+initEnv();
 
 % load data for 5000 face-images of 32 x 32 size in grayscale
 load ('faces.mat');
