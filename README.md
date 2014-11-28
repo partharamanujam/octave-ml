@@ -17,8 +17,8 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
   * Normal Equation - Linear Regression
   * Gradient Descent - Linear Regression
   * Gradient Descent - Logistic Regression
+  * Support Vector Machines - Classification
   * Neural Networks : ToDo
-  * Support Vector Machines : ToDo
 
 #### Un-Supervised Learning
 
@@ -34,10 +34,8 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
   * Octave 3.6.4 or above - https://www.gnu.org/software/octave/download.html
   * Octave-Forge packages - http://octave.sourceforge.net
     - specfun
-    - nan
     - image
-
-  Note: Ensure that the required packages are loaded at Octave startup
+  * LIBSVM for Octave - http://www.csie.ntu.edu.tw/~cjlin/libsvm
 
 ## Philosophy
 
@@ -133,7 +131,12 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
 #### [recoverPCAData](octavelib/recoverPCAData.m)
 
+#### [chooseRBFParamsForSVM](octavelib/chooseRBFParamsForSVM.m)
+
+#### [porterStemmer](octavelib/porterStemmer.m)
+
 ## License
 
   * This code: [MIT](LICENSE)
+  * Porter-Stemmer: [BSD](http://tartarus.org/martin/PorterStemmer)
   * Examples data: Courtesy ML-007 class
