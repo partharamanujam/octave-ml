@@ -24,6 +24,14 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
   * K Means - Clustering
 
+#### Anomaly Detection
+
+  * (Multivariate) Gaussian Distribution
+
+#### Recommender Systems
+
+  * Collaborative filtering (Low Rank Matrix Factorization) : ToDo
+
 #### Miscellaneous / Utilities
 
   * Feature Scaling/Normalization
@@ -134,6 +142,12 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 #### [chooseRBFParamsForSVM](octavelib/chooseRBFParamsForSVM.m)
 
 #### [porterStemmer](octavelib/porterStemmer.m)
+
+#### [computeGaussianParams](octavelib/computeGaussianParams.m)
+
+#### [computeThresholdForMultivarGaussian](octavelib/computeThresholdForMultivarGaussian.m)
+
+#### [computeMultivarGaussianDistribution](octavelib/computeMultivarGaussianDistribution.m)
 
 ## License
 

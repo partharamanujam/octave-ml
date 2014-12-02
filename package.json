@@ -1,7 +1,7 @@
 {
   "name": "octave-ml",
   "description": "Octave based Machine-learning routines",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "author": "Partha R <parthasarathi.ramanujam@gmail.com>",
   "keywords": [
@@ -13,7 +13,10 @@
     "gradient-descent",
     "neural-networks",
     "support-verctor-machines",
-    "k-means"
+    "k-means",
+    "anamoly-detection",
+    "recommender-systems",
+    "collaborative-filtering"
   ],
   "repository": {
     "type": "git",
