@@ -18,19 +18,13 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
   * Gradient Descent - Linear Regression
   * Gradient Descent - Logistic Regression
   * Support Vector Machines - Classification
-  * Neural Networks : ToDo
+  * Neural Networks - Classification : ToDo
 
 #### Un-Supervised Learning
 
   * K Means - Clustering
-
-#### Anomaly Detection
-
-  * (Multivariate) Gaussian Distribution
-
-#### Recommender Systems
-
-  * Collaborative filtering (Low Rank Matrix Factorization) : ToDo
+  * Anomaly Detection - (Multivariate) Gaussian Distribution
+  * Recommender Systems - Collaborative filtering (Low Rank Matrix Factorization) : ToDo
 
 #### Miscellaneous / Utilities
 
