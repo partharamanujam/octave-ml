@@ -24,7 +24,7 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
   * K Means - Clustering
   * Anomaly Detection - (Multivariate) Gaussian Distribution
-  * Recommender Systems - Collaborative filtering (Low Rank Matrix Factorization) : ToDo
+  * Recommender Systems - Collaborative filtering (Low Rank Matrix Factorization)
 
 #### Miscellaneous / Utilities
 
@@ -143,8 +143,17 @@ $ git clone https://github.com/partharamanujam/octave-ml.git
 
 #### [computeMultivarGaussianDistribution](octavelib/computeMultivarGaussianDistribution.m)
 
+#### [normalizeRatings](octavelib/normalizeRatings.m)
+
+#### [computeCoFiParamsByGradDescFmincg](octavelib/computeCoFiParamsByGradDescFmincg.m)
+
+#### [collaborativeFilteringCostFunction](octavelib/collaborativeFilteringCostFunction.m)
+
+#### [fmincg](octavelib/fmincg.m)
+
 ## License
 
   * This code: [MIT](LICENSE)
   * Porter-Stemmer: [BSD](http://tartarus.org/martin/PorterStemmer)
+  * fmincg: [&copy; Copyright 1999, 2000 & 2001, Carl Edward Rasmussen](octavelib/fmincg.m)
   * Examples data: Courtesy ML-007 class

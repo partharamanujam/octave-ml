@@ -1,7 +1,7 @@
 {
   "name": "octave-ml",
   "description": "Octave based Machine-learning routines",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "author": "Partha R <parthasarathi.ramanujam@gmail.com>",
   "keywords": [
